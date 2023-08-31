@@ -2,15 +2,17 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 import { InvitationModal } from "./InvitationModal";
-import logo from "../assets/images/logo.png";
+import logo from "../assets/images/logo-dark.png";
+import heroImage from "../assets/images/hero-image.jpeg";
 
 export const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <section
-      className="w-screen  flex justify-center items-center bg-customDarkBg1 mb-[28vw] md:mb-[18vw] lg:mb-[10vw] xl:mb-[13vw] 2xl:mb-60 hero-bg-gradient pb-24 sm:pb-32 md:pb-44 lg:pb-0"
+      className="w-screen flex justify-center items-center bg-no-repeat bg-cover bg-left bg-fixed mb-[28vw] md:mb-[18vw] lg:mb-[10vw] xl:mb-[13vw] 2xl:mb-60 hero-bg-gradient pb-24 sm:pb-32 md:pb-44 lg:pb-0"
       id="home"
+      style={{backgroundImage: `url(${heroImage})`}}
     >
       <div className="w-full md:w-[800px] xl:w-[900px] flex flex-col justify-center items-center pt-16 md:pt-16 lg:pt-20 text-center">
         <motion.div
@@ -37,7 +39,7 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <div className="text-customGrayText text-sm lg:text-base xl:text-lg sm:text-base mt-10 px-12 sm:px-48 ">
+          <div className="text-customDarkBg2 font-bold text-sm lg:text-base xl:text-lg sm:text-base mt-10 px-12 sm:px-48 ">
             Dedicated to filmmakers who spark awareness of mountain cultures, fragile environments, and the passion and perseverance of global explorers.
           </div>
         </motion.div>

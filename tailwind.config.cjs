@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
+      backgroundImage: {
+        'hero-background': "url('assets/images/hero_background.jpg')",
+      },
       colors: {
         customPrimary: "rgb(243, 119, 33)",
         customSecondary: "rgb(161, 163, 247)",
@@ -28,7 +31,7 @@ module.exports = {
         xl: "1280px",
         xll: "1400px",
         "2xl": "1536px",
-      },
+      }
     },
   },
 };
